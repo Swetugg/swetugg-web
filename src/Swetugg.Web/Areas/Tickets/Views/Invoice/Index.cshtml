@@ -1,0 +1,121 @@
+﻿@using Swetugg.Web.Models
+@model Swetugg.Web.Models.InvoiceRequest
+
+@{
+
+	ViewBag.Title = "Invoice Request";
+
+}
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h2>Fakturaförfrågan</h2>
+	</div>
+	<p>
+		[text om faktura förarandet]
+	</p>
+	@using (Html.BeginForm("InvoiceRequest", "Invoice", FormMethod.Post))
+	{
+		<div class="panel-body">
+			<h3>Beställare</h3>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+						@Html.LabelFor(m => m.InvoiceReciver)
+						@Html.TextBoxFor(m => m.InvoiceReciver, new { @class = "form-control" })
+						@Html.ValidationMessageFor(m => m.InvoiceReciver)
+					</div>
+					<div class="form-group">
+						@Html.LabelFor(m => m.Email)
+						@Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.Email)
+					</div>
+					<div class="form-group">
+						@Html.LabelFor(m => m.Phone)
+						@Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+						@Html.ValidationMessageFor(m => m.Phone)
+					</div>
+					<div class="form-group">
+						@Html.LabelFor(m => m.CompanyName)
+						@Html.TextBoxFor(m => m.CompanyName, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.CompanyName)
+					</div>
+					<div class="form-group">
+						@Html.LabelFor(m => m.OrganisationNumber)
+						@Html.TextBoxFor(m => m.OrganisationNumber, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.OrganisationNumber)
+					</div>
+				</div>
+			</div>
+
+			<h3>Biljetter</h3>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+						@Html.LabelFor(m => m.NumberOfTickets)
+						@Html.TextBoxFor(m => m.NumberOfTickets, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.NumberOfTickets)
+					</div>
+					<div class="form-group">
+						@Html.LabelFor(m => m.Note)
+						@Html.TextAreaFor(m => m.Note, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.Note)
+					</div>
+				</div>
+
+			</div>
+
+			<h3>Faktura</h3>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<div class="form-group">
+						@Html.LabelFor(m => m.InvoiceAddress)
+						@Html.TextAreaFor(m => m.InvoiceAddress, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.InvoiceAddress)
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+						@Html.LabelFor(m => m.PostNumber)
+						@Html.TextBoxFor(m => m.PostNumber, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.PostNumber)
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						@Html.LabelFor(m => m.PostCity)
+						@Html.TextBoxFor(m => m.PostCity, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.PostCity)
+					</div>
+				</div>
+				<div class="col-sm-12">
+
+					<div class="form-group">
+						@Html.LabelFor(m => m.InvoiceEmail)
+						@Html.TextBoxFor(m => m.InvoiceEmail, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.InvoiceEmail)
+					</div>
+
+					<div class="form-group">
+						@Html.LabelFor(m => m.InvoiceNote)
+						@Html.TextBoxFor(m => m.InvoiceNote, new {@class = "form-control"})
+						@Html.ValidationMessageFor(m => m.InvoiceNote)
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+		@Html.ValidationSummary()
+
+		<div class="panel-footer">
+			<button type="submit" class="btn btn-primary">Skicka</button>
+		</div>
+	}
+
+</div>

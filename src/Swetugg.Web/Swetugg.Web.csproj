@@ -317,6 +317,8 @@
     <Compile Include="Areas\Swetugg2016\Swetugg2016AreaRegistration.cs" />
     <Compile Include="Areas\Swetugg2017\Controllers\ConferenceController.cs" />
     <Compile Include="Areas\Swetugg2017\Swetugg2017AreaRegistration.cs" />
+    <Compile Include="Areas\Tickets\Controllers\InvoiceController.cs" />
+    <Compile Include="Models\InvoiceRequest.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ScheduleApiController.cs" />
     <Compile Include="Controllers\ConferenceExtensions.cs" />
@@ -684,6 +686,11 @@
     <Content Include="Areas\Swetugg2017\Views\Conference\CodeOfConduct.cshtml" />
     <Content Include="Areas\Swetugg2017\Views\Conference\Index.cshtml" />
     <Content Include="Areas\Swetugg2017\Views\Conference\Speaker.cshtml" />
+    <Content Include="Areas\Tickets\Views\Invoice\Index.cshtml" />
+    <Content Include="Areas\Tickets\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Tickets\Views\web.config" />
+    <Content Include="Areas\Tickets\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Tickets\Views\Invoice\Thanks.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -1125,6 +1132,7 @@
     <Folder Include="Areas\Swetugg2015\Models\" />
     <Folder Include="Areas\Swetugg2016\Models\" />
     <Folder Include="Areas\Swetugg2017\Models\" />
+    <Folder Include="Areas\Tickets\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
