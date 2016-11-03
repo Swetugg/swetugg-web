@@ -25,6 +25,8 @@ namespace Swetugg.Web.Models
         public DbSet<CfpSpeaker> CfpSpeakers { get; set; }
         public DbSet<CfpSession> CfpSessions { get; set; }
 
+        public DbSet<InvoiceRequest> InvoiceRequests { get; set; } // För att den ska plockas upp ordentligt av Entity Framework
+
 		public static ApplicationDbContext Create()
 		{
             IDatabaseInitializer<ApplicationDbContext> strategy;

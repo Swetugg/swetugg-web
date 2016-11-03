@@ -43,8 +43,9 @@ namespace Swetugg.Web.Areas.Tickets.Controllers
             return View();
         }
 
-
-
+        
+        [HttpPost]  // Måste ligga här för att denna ska användas när du POST:ar formuläret
+        [Route("")] // Tror man behöver en route också
         public async Task<ActionResult> InvoiceRequest(InvoiceRequest request)
         {
 

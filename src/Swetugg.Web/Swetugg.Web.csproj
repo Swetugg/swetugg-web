@@ -318,6 +318,10 @@
     <Compile Include="Areas\Swetugg2017\Controllers\ConferenceController.cs" />
     <Compile Include="Areas\Swetugg2017\Swetugg2017AreaRegistration.cs" />
     <Compile Include="Areas\Tickets\Controllers\InvoiceController.cs" />
+    <Compile Include="Migrations\201611031717291_InvoiceRequests.cs" />
+    <Compile Include="Migrations\201611031717291_InvoiceRequests.Designer.cs">
+      <DependentUpon>201611031717291_InvoiceRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\InvoiceRequest.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ScheduleApiController.cs" />
@@ -1173,6 +1177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610290957547_MinNumberOfSpeakers.resx">
       <DependentUpon>201610290957547_MinNumberOfSpeakers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611031717291_InvoiceRequests.resx">
+      <DependentUpon>201611031717291_InvoiceRequests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
